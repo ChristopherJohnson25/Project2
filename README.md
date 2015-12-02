@@ -32,9 +32,9 @@ Click [here](http://chrisjohnson25.github.io/Project2_Wiki/) to view now.
 
 ##Front End WireFrame
 
-<img src="wireframe3.png"/>
-<img src="wireframe.png"/>
+<img src="/ERD_WIREFRAME/wireframe3.png"/>
+<img src="/ERD_WIREFRAME/wireframe.png"/>
 
 ##ERD/Data Models
 
-<img src="ERD.png"/>
+<img src="/ERD_WIREFRAME/ERD.png"/>
