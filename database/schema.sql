@@ -4,12 +4,12 @@ DROP TABLE IF EXISTS categories;
 DROP TABLE IF EXISTS contents_users;
 DROP TABLE IF EXISTS contents_categories;
 
-CREATE TABLE contents (
+CREATE TABLE articles (
 	id INTEGER PRIMARY KEY,
 	post TEXT,
 	img_url TEXT,
 	post_date DATETIME,
-	edit_date DATETIME
+	# edited_at DATETIME
 );
 
 CREATE TABLE users (
@@ -24,12 +24,14 @@ CREATE TABLE categories (
 	name VARCHAR
 );
 
-CREATE TABLE contents_users (
+CREATE TABLE articles_users #or edits (
+	id INTEGER PRIMARY KEY,
+	edited_at DATETIME,
 	user_id INTEGER REFERENCES user(id),
 	content_id INTEGER REFERENCES content(id)
 );
 
-CREATE TABLE contents_categories (
+CREATE TABLE articles_categories (
 	category_id INTEGER REFERENCES category(id),
 	content_id INTEGER REFERENCES content(id)
 );
