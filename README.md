@@ -32,7 +32,7 @@ Click [here](http://chrisjohnson25.github.io/Project2_Wiki/) to view now.
 
 ##Front End WireFrame
 
-
+<img src="wireframe.png"/>
 
 ##ERD/Data Models
 
