@@ -36,4 +36,4 @@ Click [here](http://chrisjohnson25.github.io/Project2_Wiki/) to view now.
 
 ##ERD/Data Models
 
-<img src="updatederd.png"/>
+<img src="UpdatedErd.png"/>
