@@ -1,5 +1,5 @@
 # Project2
-WDI - Project 2
+## WDI - Project Two - Wiki
 
 ##Description
 
