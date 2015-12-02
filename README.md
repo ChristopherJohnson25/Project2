@@ -30,6 +30,10 @@ Click [here](http://chrisjohnson25.github.io/Project2_Wiki/) to view now.
 - SQL/Active Record
 - JavaScript/jQuery
 
+##Front End WireFrame
+
+
+
 ##ERD/Data Models
 
-<img src="ERD.jpg"/>
+<img src="updatederd.png"/>
