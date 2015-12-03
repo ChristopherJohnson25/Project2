@@ -1,6 +1,89 @@
-@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Damion);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+
+h1 {
+	font-size: 65px;
+}
 
 body {
-	background-color: #8F99A6;
-	font-family: 'Pacifico', cursive;
+	background-color: #0A0A0A;
+	color: #1AD8FF;
+	font-family: 'Damion', cursive;
+	position: absolute;
+	/*background-image: url("img/background1.jpg");*/
+}
+
+button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.5, #ededed), color-stop(1, #dfdfdf));
+	background:-moz-linear-gradient(top, #1AD8FF 5%, #1AD8FF 100%);
+	background:-webkit-linear-gradient(top, #ededed 5%, #1AD8FF 100%);
+	background:-o-linear-gradient(top, #ededed 5%, #1AD8FF 100%);
+	background:-ms-linear-gradient(top, #ededed 5%, #1AD8FF 100%);
+	background:linear-gradient(to bottom, #ededed 5%, #1AD8FF 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0);
+	background-color:#1AD8FF;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#777777;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+
+#background {
+	position:relative;
+	display:inline;
+	height:100%;
+	width:100%;
+	background-image: url("img/background1.jpg");
+}
+
+.articles {
+	font-family: 'PT Sans Narrow', sans-serif;
+	color:white;
+	float:left;
+}
+
+.categoriesSplash {
+	color:#1AD8FF;
+}
+
+.welcomeLinks {
+	font-size: 50px;
+	text-decoration: none;
+	color: inherit;
+	padding: 20px;
+
+}
+
+.welcomeLinks:hover, .smallLink:hover, .categoryList:hover {
+	color:#FF3387;
+}
+
+.smallLink {
+	font-size: 30px;
+	text-decoration: none;
+	color: inherit;
+}
+
+.categoryList a{
+	color:#FF3387;
+	font-size: 25px;
+	text-decoration: none;
+	color: inherit;
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.welcomePhoto {
+
 }

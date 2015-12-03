@@ -1,0 +1,25 @@
+<h1>Welcome!</h1>
+
+<div>
+<a class="welcomeLinks" href="/">Home</a>
+<a class="welcomeLinks" href="/postArticle">Post an Article!</a>
+<a class="welcomeLinks" href="/articles">View All Articles</a>
+</div>
+
+<div class="categoriesSplash">
+
+	<h1>Categories!</h1>
+
+	 <ul>
+	    <% @categories.each do |category| %>
+	      <li class="categoryList">
+	       <p> <a href="/categories/<%= category["id"] %>"> <%=category["name"]%> </a> </p>
+	      </li>
+	    <% end %>
+	  </ul>
+
+</div>
+
+<div class="welcomePhoto">
+
+</div>

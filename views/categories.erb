@@ -1,0 +1,11 @@
+<img class="img" src="" alt="PUT IMAGE">
+
+<h1>Categories!</h1>
+
+ <ul>
+    <% @categories.each do |category| %>
+      <li>
+       <p> <a href="/categories/<%= category["id"] %>"> <%=category["name"]%> </a> </p>
+      </li>
+    <% end %>
+  </ul>
