@@ -17,6 +17,8 @@ module App
     get "/categories/:id" do
       @category = Category.find(params[:id])
       @articles = Category.find(params[:id]).articles
+      puts params[:id]
+      binding.pry
       erb :articleView
     end
 
