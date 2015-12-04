@@ -7,6 +7,13 @@
 	<script src="main.js"></script>
 </head>
 <body>
-<%=yield%>
+	<% if session[:user_id] %>
+		<form action="/sessions" method="POST">
+			<input type="hidden" name="_method" value="delete">
+		   	<button>Log Out</button>
+		</form>
+	<% end %>
+
+	<%=yield%>
 </body>
 </html>

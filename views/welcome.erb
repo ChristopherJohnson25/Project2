@@ -1,32 +1,21 @@
 <h1>Welcome!</h1>
 
 <div>
-<a class="welcomeLinks" href="/postArticle">Post an Article!</a>
-<a class="welcomeLinks" href="/articles">View All Articles</a>
-
+	<a class="welcomeLinks" href="/postArticle">Post an Article!</a>
+	<a class="welcomeLinks" href="/articles">View All Articles</a>
 </div>
 
 <div class="categoriesSplash">
-
 	<h1>Categories!</h1>
-
 	 <ul>
 	    <% @categories.each do |category| %>
 	      <li class="categoryList">
-	       <p> <a href="/categories/<%= category["id"] %>"> <%=category["name"]%> </a> </p>
+	      	<p>
+	      		<a href="/categories/<%= category["id"] %>"><%=category["name"]%></a> 
+	      	</p>
 	      </li>
 	    <% end %>
 	  </ul>
-
 </div>
 
-<form action="/sessions" method="POST">
-	<input type="hidden" name="_method" value="delete">
-   	<button>Log Out</button>
-</form>
-
-
-
-<div class="welcomePhoto">
-
-</div>
+<div class="welcomePhoto"></div>

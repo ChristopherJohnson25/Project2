@@ -2,14 +2,12 @@
 
 <div class="articles">
 	<% @articles.each do |article| %>
-	<% article.categories.each do |category| %>
-		
 		<h1><%= article.subject %> </h1>
-		<h2>Category: <%= category.name %></h2>
 		<p><%= article.post %></p>
-		<h5>by <%= article.user.user_name %> on <%= article.post_date %> </h5>
-		
-	<% end %>
+		<% article.categories.each do |category| %>	
+			<h2>Category: <%= category.name %></h2>
+			<h5>by <%= article.user.user_name %> on <%= article.post_date %> </h5>
+		<% end %>
 	<% end %>
 </div>
 

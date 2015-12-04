@@ -5,8 +5,12 @@ module App
     enable :sessions
 
 		get "/" do
-      @user = User.find(session[:user_id]) if session[:user_id]
-      erb :splash 
+      if session[:user_id]
+        @user = User.find(session[:user_id])
+        redirect to "/welcome"
+      else
+        erb :splash 
+      end
     end
 
     get "/signUp" do
@@ -50,10 +54,6 @@ module App
       @category.articles
       erb :articleView
     end
-
-		post "/sessions" do
-			redirect to "/"
-		end
 
     # Login
     post "/" do
