@@ -1,45 +1,61 @@
 module App 
-
 	class Server < Sinatra::Base
+
 		set :method_override, true
     enable :sessions
 
+		get "/" do
+      @user = User.find(session[:user_id]) if session[:user_id]
+      erb :splash 
+    end
+
+    get "/signUp" do
+      erb :signUp
+    end
+
+    post "/users" do
+      @user = User.create({
+        user_name: params["name"],
+        location: params["location"], 
+        avatar_url: params["avatar_img_url"], 
+        password: params["password"], 
+        password_confirmation: params["password_confirmation"],
+        join_date: DateTime.now
+      })
+      redirect to "/welcome"
+    end
+
+    get "/welcome" do
+      @categories = Category.all
+      erb :welcome
+    end
 
     get "/postArticle" do
       @categories = Category.all
       erb :postArticle
     end
 
-		get "/" do
-			erb :splash			
-		end
+    get "/articles" do
+      @articles = Article.all
+      erb :article
+    end
+
+    get "/categories" do
+      @categories = Category.all
+      erb :categories
+    end
 
     get "/categories/:id" do
       @category = Category.find(params[:id])
-      @articles = Category.find(params[:id]).articles
-      puts params[:id]
-      binding.pry
+      @category.articles
       erb :articleView
     end
-
-		get "/signUp" do
-			erb :signUp
-		end
 
 		post "/sessions" do
 			redirect to "/"
 		end
 
-		post "/users" do
-  		@user = User.create(user_name: params["name"],location: params["location"], avatar_url: params["avatar_img_url"], password: params["password"], password_confirmation: params["password_confirmation"],join_date: DateTime.now)
-      redirect to "/welcome"
-    end
-
-    get "/" do
-      @user = User.find(session[:user_id]) if session[:user_id]
-      erb :splash 
-    end
-
+    # Login
     post "/" do
     # Try to find user in DB
       user = User.find_by({
@@ -54,9 +70,8 @@ module App
       end
     end
 
-    get "/welcome" do
-      @categories = Category.all
-    	erb :welcome
+    get "/redirect" do
+      erb :wrongPass
     end
 
     post "/post" do
@@ -72,20 +87,7 @@ module App
       redirect to "/welcome"
     end
 
-    get "/categories" do
-      @categories = Category.all
-      erb :categories
-    end
-
-    get "/articles" do
-      @articles = Article.all
-      erb :article
-    end
-
-    get "/redirect" do
-      erb :wrongPass
-    end
-
+    # Logout
 
     delete "/sessions" do
       session[:user_id] = nil

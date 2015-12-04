@@ -1,4 +1,5 @@
 require "pry"
+require("bcrypt")
 require "sinatra"
 
 require_relative "database/config"

@@ -2,12 +2,13 @@
 
 <div class="articles">
 	
-	 <%@articles.each do |article|%>
-	 <h2> <%=article.subject %> </h2>
-	 <p> <%=article.post %> </p>
+	 <% @category.articles.each do |article|%>
+	 <h2> <%= article.subject %> </h2>
+	 <p> <%= article.post %> </p>
 	 <div>
 	 	<img src="<%=article.img_url%>">
 	 </div>
+	 there is an article without a user_id
 	 <h4>by <%= article.user.user_name %> on <%= article.post_date %> </h4>
 	 <% end %>
 </div>

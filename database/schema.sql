@@ -1,7 +1,6 @@
 DROP TABLE IF EXISTS articles;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS categories;
-DROP TABLE IF EXISTS articles_users;
 DROP TABLE IF EXISTS articles_categories;
 
 CREATE TABLE articles (
@@ -12,6 +11,7 @@ CREATE TABLE articles (
 	subject VARCHAR,
 	user_id INTEGER REFERENCES users(id)
 ); 
+
 CREATE TABLE users (
 	id INTEGER PRIMARY KEY,
 	password_digest VARCHAR,
@@ -24,13 +24,6 @@ CREATE TABLE users (
 CREATE TABLE categories (
 	id INTEGER PRIMARY KEY,
 	name VARCHAR
-);
-
-CREATE TABLE articles_users (
-	id INTEGER PRIMARY KEY,
-	edited_at DATETIME,
-	user_id INTEGER REFERENCES user(id),
-	content_id INTEGER REFERENCES content(id)
 );
 
 CREATE TABLE articles_categories (
