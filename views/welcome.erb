@@ -1,9 +1,9 @@
 <h1>Welcome!</h1>
 
 <div>
-<a class="welcomeLinks" href="/">Home</a>
 <a class="welcomeLinks" href="/postArticle">Post an Article!</a>
 <a class="welcomeLinks" href="/articles">View All Articles</a>
+
 </div>
 
 <div class="categoriesSplash">
@@ -19,6 +19,13 @@
 	  </ul>
 
 </div>
+
+<form action="/sessions" method="POST">
+	<input type="hidden" name="_method" value="delete">
+   	<button>Log Out</button>
+</form>
+
+
 
 <div class="welcomePhoto">
 

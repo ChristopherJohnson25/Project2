@@ -7,11 +7,14 @@
 		<h1><%= article.subject %> </h1>
 		<h2>Category: <%= category.name %></h2>
 		<p><%= article.post %></p>
-		<h3><%= article.user.user_name %></h3>
-		<h5><%= article.post_date %></h5>
+		<h5>by <%= article.user.user_name %> on <%= article.post_date %> </h5>
 		
 	<% end %>
 	<% end %>
 </div>
 
 <div class="articlesImage"></div>
+
+<div class="smallLink">
+	<a href="/welcome">...Back</a>
+</div>

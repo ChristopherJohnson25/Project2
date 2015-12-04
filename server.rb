@@ -16,6 +16,7 @@ module App
 
     get "/categories/:id" do
       @category = Category.find(params[:id])
+      @articles = Category.find(params[:id]).articles
       erb :articleView
     end
 
@@ -29,7 +30,7 @@ module App
 
 		post "/users" do
   		@user = User.create(user_name: params["name"],location: params["location"], avatar_url: params["avatar_img_url"], password: params["password"], password_confirmation: params["password_confirmation"],join_date: DateTime.now)
-      redirect to "/"
+      redirect to "/welcome"
     end
 
     get "/" do
@@ -66,7 +67,7 @@ module App
       })
       category = Category.find(params[:category_id])
       article.categories.push(category)
-      redirect to "/articles"
+      redirect to "/welcome"
     end
 
     get "/categories" do
@@ -82,5 +83,12 @@ module App
     get "/redirect" do
       erb :wrongPass
     end
+
+
+    delete "/sessions" do
+      session[:user_id] = nil
+      redirect to "/"
+    end
+
 	end
 end
