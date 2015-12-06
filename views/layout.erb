@@ -4,16 +4,22 @@
 	<title>Bruce-O-Pedia</title>
 	<link rel="icon" href="favicon.ico">
 	<link rel="stylesheet" type="text/css" href="/style.css">
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 	<script src="main.js"></script>
 </head>
 <body>
-	<% if session[:user_id] %>
-		<form action="/sessions" method="POST">
-			<input type="hidden" name="_method" value="delete">
-		   	<button>Log Out</button>
-		</form>
-	<% end %>
-
-	<%=yield%>
+	<% if session[:user_id] %>	
+		<footer>
+			<div class="logoutButton">
+				
+					<form action="/sessions" method="POST">
+						<input type="hidden" name="_method" value="delete">
+					   	<button>Log Out</button>
+					</form>
+				<% end %>
+			</div>
+		</footer>
+			<%=yield%>
+	
 </body>
 </html>

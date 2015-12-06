@@ -18,6 +18,7 @@ module App
     end
 
     post "/users" do
+      articles = User.articles.all
       @user = User.create({
         user_name: params["name"],
         location: params["location"], 
@@ -55,6 +56,11 @@ module App
       erb :articleView
     end
 
+    get "/profile/:id" do
+      @profile = User.find(params[:id])
+      erb :users
+    end
+
     # Login
     post "/" do
     # Try to find user in DB
@@ -73,6 +79,27 @@ module App
     get "/redirect" do
       erb :wrongPass
     end
+
+    get "/edit/:id" do
+      @article = Article.find(params[:id])
+      @categories = Category.all
+      @articles = Article.all 
+      erb :edit
+    end
+
+    post "/editing" do
+      article = Article.update({
+        post: params[:post],
+        img_url: params[:img_url],
+        subject: params[:subject],
+        post_date: DateTime.now,
+        user_id: session[:user_id]
+      })
+      category = Category.find(params[:category_id])
+      article.categories.push(category)
+      redirect to "/categories/:id"
+    end
+
 
     post "/post" do
       article = Article.create({

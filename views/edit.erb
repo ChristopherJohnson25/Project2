@@ -1,0 +1,26 @@
+<h1>Edit!</h1>
+
+<form action="/editing" method="POST">
+	<label for="img_url">Photo URL:</label>
+	<input value="<%=@article.img_url%>"type="text" name="img_url" placeholder="URL">
+	<label for="img_url">Subject:</label>
+	<input value= "<%=@article.subject%>" type="text" name="subject" placeholder="Subject">
+	<label for="select">Categories:</label>
+
+
+	<select type="text" name="category_id">
+		<% @categories.each do |category| %>
+
+  		<option value="<%=category.id%>"> <%=category.name%> </option>
+
+  		<% end %>
+
+	</select>
+
+	<textarea name="post" cols="100" rows="20">"<%=@article.post%>"</textarea>
+  <button>Edit</button>
+</form>
+
+<form actiong="/articleDelete" method="DELETE">
+	<button>Delete</button>
+</form>

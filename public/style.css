@@ -9,8 +9,8 @@ body {
 	background-color: #0A0A0A;
 	color: #1AD8FF;
 	font-family: 'Damion', cursive;
-	position: absolute;
-	/*background-image: url("img/background1.jpg");*/
+/*	background-image: url("img/background1.jpg");
+	background-repeat: no-repeat;*/
 }
 
 button {
@@ -25,27 +25,75 @@ button {
 	background:linear-gradient(to bottom, #ededed 5%, #1AD8FF 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0);
 	background-color:#1AD8FF;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border:.3px solid #dcdcdc;
 	display:inline-block;
 	cursor:pointer;
 	color:#777777;
-	font-family:Arial;
+	font-family:'PT Sans Narrow', sans-serif;
 	font-size:15px;
-	font-weight:bold;
+	/*font-weight:bold;*/
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffffff;
 }
 
+footer {
+	position:fixed;
+	float:right;
+	bottom: 0px; 
+	width: 30%; 
+	height: 50px; 
+	background-color:#0A0A0A;
+}
+
+.backgroundSplash {
+	position:absolute;
+	display:block;
+	background-image: url("img/background1.jpg");
+
+}
+
+.splashLogin{
+	padding: 20px;
+	opacity: 1;
+}
+
+.splash {
+	background-color: #8C8C8C;
+	width:500px;
+	height: 500px;
+	margin: 0 auto;
+	opacity: .4;
+	border-radius: 30px;
+	text-align: center;
+	margin-top: 60px;
+}
+
+.logoutButton {
+	margin: 0 auto;
+	width: 30%;
+}
+
+.welcomeContainer {
+	background-color: #8C8C8C;
+	width:400px;
+	height: 750px;
+	margin: 0 auto;
+	opacity: 1;
+	border-radius: 30px;
+	text-align: center;
+	float:right;
+
+}
+
 #background {
-	position:relative;
-	display:inline;
 	height:100%;
 	width:100%;
 	background-image: url("img/background1.jpg");
+	opacity:.4;
+	background-repeat: no-repeat;
 }
 
 .articles {
@@ -82,8 +130,40 @@ button {
 	text-decoration: none;
 	color: inherit;
 	font-family: 'PT Sans Narrow', sans-serif;
+	list-style: circle;
 }
 
 .welcomePhoto {
+	background-image: url("img/background1.jpg");
+}
 
+.modal {
+	display: none;
+	height: 100%;
+	width: 100%;
+	background-color:#8F99A6;
+	opacity: .8;
+	z-index:1000;
+	position:fixed;
+	bottom: 0;
+}
+
+.pop {
+
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+	margin: 0 auto;
+	height:400px;
+	width:450px;
+	font-family: 'Lobster', cursive;
+	font-size: 50px;
+	background-color: white;
+
+}
+
+.users {
+	font-family: 'PT Sans Narrow', sans-serif;
+	color:white;
+	float:left;
 }

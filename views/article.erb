@@ -1,15 +1,23 @@
 <h1>Articles</h1>
 
+<div class="smallLink">
+	<a href="/welcome">...Back</a>
+</div>
+
 <div class="articles">
 	<% @articles.each do |article| %>
 		<h1><%= article.subject %> </h1>
 		<p><%= article.post %></p>
 		<% article.categories.each do |category| %>	
 			<h2>Category: <%= category.name %></h2>
-			<h5>by <%= article.user.user_name %> on <%= article.post_date %> </h5>
+			<h4><a href="/edit">Edit</a></h4>
+			<h5>by <a href="/profile/<%= article.user.id %>"><%= article.user.user_name %></a> on <%= article.post_date %> </h5>
+
 		<% end %>
 	<% end %>
 </div>
+
+
 
 <div class="articlesImage"></div>
 

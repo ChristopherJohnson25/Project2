@@ -1,0 +1,13 @@
+
+<div class="users">
+	<h1> <%= @profile.user_name %>'s Profile</h1>
+	<h2>Location: <%= @profile.location %></h2>
+	<div>
+		<img src="<%= @profile.avatar_url %>">
+	</div>
+
+
+	<% @articles.each do |article| %>
+	<p><%= article.post %></p>
+	<% end %>
+</div>
