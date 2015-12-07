@@ -3,21 +3,21 @@
 <div class="smallLink">
 	<a href="/welcome">...Back</a>
 </div>
-
-<div class="articles">
-	<% @articles.each do |article| %>
-		<h1><%= article.subject %> </h1>
-		<p><%= article.post %></p>
-		<% article.categories.each do |category| %>	
-			<h2>Category: <%= category.name %></h2>
-			<h4><a href="/edit">Edit</a></h4>
-			<h5>by <a href="/profile/<%= article.user.id %>"><%= article.user.user_name %></a> on <%= article.post_date %> </h5>
-
-		<% end %>
-	<% end %>
+<div class="container">
+	<div class="container1">
+		<div class="articles">
+			<% @articles.each do |article| %>
+				<h1><%= article.subject %> </h1>
+				<p><%= markdown(article.post) %></p>
+				<% article.categories.each do |category| %>	
+					<h2>Category: <%= category.name %></h2>
+					<h4><a href="/edit">Edit</a></h4>
+					<h5>by <a href="/profile/<%= article.user.id %>"><%= article.user.user_name %></a> on <%= article.post_date %> </h5>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
 </div>
-
-
 
 <div class="articlesImage"></div>
 

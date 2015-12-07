@@ -101,8 +101,14 @@ module App
         user_id: session[:user_id]
       })
       category = Category.find(params[:category_id])
-      article.categories.push(category)
+      category1 = article.categories.where(id: params[:category_id])
+      if !category1.exists?
+
+        article.categories.push(category)
+      end
+      # check to see if there's already that category related to thst article
       redirect to "/articles"
+
     end
 
     post "/post" do

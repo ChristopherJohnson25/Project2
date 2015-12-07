@@ -84,14 +84,12 @@ footer {
 }
 	.container1 {
 		height: 100%;
-		width:100%;
+		width:80%;
 		margin: 0 auto;
-		position: absolute;
-		display: inline;
-	  	opacity: 0.6;
-	  	background: #8C8C8C;
-	  	border: 1px solid #ccc;
-	  	border: 1px solid #ccc;
+		display: block;
+	  	background: rgba(140,140,140,.5);
+	  	border: .2px solid #1AD8FF;
+	  	border: .2px solid #1AD8FF;
 	  	border-radius: 3px;
 	  	z-index: -100;
 	}
@@ -110,7 +108,12 @@ footer {
 		padding-top: 10px;
 		position:relative;
 	}
-
+	.articles {
+		width:90%;
+		margin: 0 auto;
+		padding-top: 10px;
+		position:relative;
+	}
 
 .categoriesSplash {
 	color:#1AD8FF;
@@ -174,33 +177,39 @@ footer {
 .userContainer1 {
 	position: relative;
 	font-family: 'PT Sans Narrow', sans-serif;
-	background-image: url('img/wood.jpg');
 	color:white;
-	width: 80%;
-	float:left;
 	margin: 0 auto;
-	background: #8C8C8C;
-	padding-top: 15px;
-	max-width:80%;
-	min-width:1000px;
-	border-radius: 10px;
 
 }
 	.userContainer{
-		background: #8C8C8C;
-		opacity: .5;
+		height: 100%;
+		width:80%;
 		margin: 0 auto;
-	  	background: #8C8C8C;
+		display: block;
+	  	background: rgba(140,140,140,.5);
+	  /*	border: .2px solid #1AD8FF;
+	  	border: .2px solid #1AD8FF;*/
 	  	border-radius: 3px;
 	  	z-index: -100;
 
 	}
 	.users {
-		position: relative;
+		width:80%;
+		margin: 0 auto;
 		text-align: center;
-		font-family: 'PT Sans Narrow', sans-serif;
-		color:white;
-		float:left;
-		padding-left: 15px;
-		padding-bottom: 20px; 
+		padding-top: 10px;
+		position:relative; 
 	}
+
+	.avatar img{
+		width: 20%;
+	}
+
+	.userPix{
+		width:10%;
+		margin:0 auto;
+		max-width: 500px;
+		max-height: 500px;
+	}
+
+

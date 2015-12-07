@@ -9,15 +9,15 @@
 </head>
 <body>
 	<% if session[:user_id] %>	
-		<footer>
+		<header>
 			<div class="logoutButton">
-					<form action="/sessions" method="POST">
-						<input type="hidden" name="_method" value="delete">
-					   	<button>Log Out</button>
-					</form>
-				<% end %>
+				<form action="/sessions" method="POST">
+					<input type="hidden" name="_method" value="delete">
+				   	<button>Log Out</button>
+				</form>
 			</div>
-		</footer>
+	<% end %>
+		</header>
 			<%=yield%>
 	
 </body>
