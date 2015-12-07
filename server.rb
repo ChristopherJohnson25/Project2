@@ -1,7 +1,7 @@
 module App 
 	class Server < Sinatra::Base
 
-    $markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, space_after_headers: true, tables: true, quote: true, underline: true)
+    $markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, space_after_headers: true, bold:true,tables: true, quote: true, underline: true, hard_wrap: true)
 
 		set :method_override, true
     enable :sessions
