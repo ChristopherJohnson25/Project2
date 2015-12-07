@@ -1,6 +1,8 @@
 module App 
 	class Server < Sinatra::Base
 
+    $markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, space_after_headers: true, tables: true, quote: true, underline: true)
+
 		set :method_override, true
     enable :sessions
 
@@ -18,7 +20,6 @@ module App
     end
 
     post "/users" do
-      articles = User.articles.all
       @user = User.create({
         user_name: params["name"],
         location: params["location"], 
@@ -53,11 +54,13 @@ module App
     get "/categories/:id" do
       @category = Category.find(params[:id])
       @category.articles
+      @article = Article.all
       erb :articleView
     end
 
     get "/profile/:id" do
       @profile = User.find(params[:id])
+      @articles = Article.all
       erb :users
     end
 
@@ -72,11 +75,11 @@ module App
         session[:user_id] = user.id
         redirect to "/welcome"
       else 
-        redirect to "/redirect"
+        redirect to "/wrongPassword"
       end
     end
 
-    get "/redirect" do
+    get "/wrongPassword" do
       erb :wrongPass
     end
 
@@ -87,8 +90,9 @@ module App
       erb :edit
     end
 
-    post "/editing" do
-      article = Article.update({
+    patch "/articles/:id" do
+      article = Article.find(params['id'])
+      article.update({
         post: params[:post],
         img_url: params[:img_url],
         subject: params[:subject],
@@ -97,9 +101,8 @@ module App
       })
       category = Category.find(params[:category_id])
       article.categories.push(category)
-      redirect to "/categories/:id"
+      redirect to "/articles"
     end
-
 
     post "/post" do
       article = Article.create({

@@ -1,6 +1,7 @@
 <h1>Edit!</h1>
 
-<form action="/editing" method="POST">
+<form action="/articles/<%= @article.id %>" method="POST">
+	<input type="hidden" name="_method" value="patch">
 	<label for="img_url">Photo URL:</label>
 	<input value="<%=@article.img_url%>"type="text" name="img_url" placeholder="URL">
 	<label for="img_url">Subject:</label>
@@ -21,6 +22,3 @@
   <button>Edit</button>
 </form>
 
-<form actiong="/articleDelete" method="DELETE">
-	<button>Delete</button>
-</form>
