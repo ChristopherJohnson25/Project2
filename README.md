@@ -3,14 +3,12 @@
 
 ##Description
 
-> Νε εαμ σριπθα ευριπιδις ρεπριμικυε, νιηιλ μαιεσθατις τεμποριβυς ετ φελ. Ιν ηας εξερσι περισυλα. Θωτα κυοδσι υσυ νο. Εσθ κυωτ σολετ θεμπορ αν. Υθ επισυρει εξπετενδα περισυλις ευμ, ηις ιλλυμ αεκυε παθριοκυε ιν. Ηας πριμα ωφφενδιθ υθ, κυεμ ιρασυνδια ει εως, περ γραεσις σωρπορα εα.
-
-> Αγαμ μαγνα υλλυμ ευμ ει, ευ υσυ ερρωρ πρωβατυς, συμο δισερετ εα περ. Φευγιαθ φαστιδιι ιυς αδ. Συ υταμυρ σοτιδιεκυε περσεκυερις σεδ. Αν κυι εσε περσιπιθ σριβενθυρ, νιβχ σαυσαε ρεγιονε δυο εα. Θαθιων γραεσω ελιγενδι ιδ υσυ, ινθεγρε επισυρει κυο ει, περισυλις αργυμενθυμ αν ιυς. >
+> Bruce-O-Pedia is the ultimate Bruce Springsteen community for uploading, writing and editing content that deals with all things BOSS. Users can write, read, and edit articles complete with images and other extras.
 
 
 ##Link to Page
 
-Click [here](http://chrisjohnson25.github.io/Project2_Wiki/) to view now.
+Click [here](https://lit-eyrie-2541.herokuapp.com) to view now.
 
 ##User Stories
 
