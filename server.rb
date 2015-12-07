@@ -60,6 +60,7 @@ module App
 
     get "/profile/:id" do
       @profile = User.find(params[:id])
+      @images = @profile.articles
       @articles = Article.all
       erb :users
     end
