@@ -1,4 +1,4 @@
-require "pry"
+# require "pry"
 require("bcrypt")
 require "sinatra"
 require "redcarpet"
