@@ -1,22 +1,24 @@
-<h1><%= @category.name %></h1>
-
-<div class="smallLink">
-	<a href="/welcome">...Back</a>
-</div>
-
-<div class="articles">
-
-	 <% @category.articles.each do |article|%>
-	 	<h2> <a href="/edit/<%= article.id %>"><%= article.subject %></a>  Click to Edit</h2>
-	 	<p> <%= markdown(article.post) %> </p>
-	 	<div>
-	 		<img src="<%= article.img_url %>">
-	 	</div>
-
-	 	<h4>by <a href="/profile/<%= article.user.id %>"><%= article.user.user_name %></a> on <%= article.post_date %> </h4>
-	 <% end %>
+<div class="header1">
+	<h1><%= @category.name %></h1>
 </div>
 
 <div class="smallLink">
 	<a href="/welcome">...Back</a>
 </div>
+	<div class="container">
+		<div class="container1"></div>
+		<div class="ArticleText">
+			<% @category.articles.each do |article|%>
+			<h2> <a href="/edit/<%= article.id %>"><%= article.subject %></a></h2>
+			<h3>Click To Edit</h3>
+			<p> <%= markdown(article.post) %> </p>
+			<div>
+				<img src="<%= article.img_url %>">
+			</div>
+
+			<h4>by <a href="/profile/<%= article.user.id %>"><%= article.user.user_name %></a> on <%= article.post_date %> </h4>
+			<% end %>
+		</div>
+	</div>
+
+

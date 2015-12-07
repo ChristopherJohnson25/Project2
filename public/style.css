@@ -11,6 +11,7 @@ body {
 	font-family: 'Damion', cursive;
 	background-image: url("img/background1.jpg");
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 button {
@@ -40,10 +41,10 @@ button {
 }
 
 footer {
-	position:fixed;
+	position: relative;
 	float:right;
-	bottom: 0px; 
-	width: 30%; 
+	width: 100%; 
+	bottom: .1px;
 	height: 50px;
 }
 
@@ -71,7 +72,8 @@ footer {
 }
 
 .logoutButton {
-	width: 30%;
+	width: 0%;
+	margin: 0 auto;
 }
 
 .welcomeContainer {
@@ -94,11 +96,47 @@ footer {
 	background-repeat: no-repeat;
 }
 
-.articles {
+.header1 {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+.container{
+	position: relative;
 	font-family: 'PT Sans Narrow', sans-serif;
 	color:white;
-	float:left;
+	margin: 0 auto;
+	
 }
+	.container1 {
+		height: 100%;
+		width:100%;
+		margin: 0 auto;
+		position: absolute;
+		display: inline;
+	  	opacity: 0.6;
+	  	background: #8C8C8C;
+	  	border: 1px solid #ccc;
+	  	border: 1px solid #ccc;
+	  	border-radius: 3px;
+	  	z-index: -100;
+	}
+
+	.ArticleText {
+		width:80%;
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 10px;
+		position:relative;
+	}
+	.ArticleText img{
+		width:50%;
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 10px;
+		position:relative;
+	}
+
 
 .categoriesSplash {
 	color:#1AD8FF;
@@ -159,9 +197,36 @@ footer {
 	background-color: white;
 
 }
-
-.users {
+.userContainer1 {
+	position: relative;
 	font-family: 'PT Sans Narrow', sans-serif;
+	background-image: url('img/wood.jpg');
 	color:white;
+	width: 80%;
 	float:left;
+	margin: 0 auto;
+	background: #8C8C8C;
+	padding-top: 15px;
+	max-width:80%;
+	min-width:1000px;
+	border-radius: 10px;
+
 }
+	.userContainer{
+		background: #8C8C8C;
+		opacity: .5;
+		margin: 0 auto;
+	  	background: #8C8C8C;
+	  	border-radius: 3px;
+	  	z-index: -100;
+
+	}
+	.users {
+		position: relative;
+		text-align: center;
+		font-family: 'PT Sans Narrow', sans-serif;
+		color:white;
+		float:left;
+		padding-left: 15px;
+		padding-bottom: 20px; 
+	}

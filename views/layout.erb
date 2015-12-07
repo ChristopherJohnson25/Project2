@@ -11,7 +11,6 @@
 	<% if session[:user_id] %>	
 		<footer>
 			<div class="logoutButton">
-				
 					<form action="/sessions" method="POST">
 						<input type="hidden" name="_method" value="delete">
 					   	<button>Log Out</button>
