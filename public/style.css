@@ -1,15 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Damion);
 @import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+@import url(https://fonts.googleapis.com/css?family=PT+Mono);
 
 h1 {
-	font-size: 65px;
+	font-size: 100px;
+	text-align: center;
 }
 
 body {
 	background-color: #0A0A0A;
 	color: #1AD8FF;
 	font-family: 'Damion', cursive;
-	background-image: url("img/background1.jpg");
+	background-image: url("img/bruceFace.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
@@ -21,46 +23,121 @@ footer {
 	bottom: .1px;
 	height: 50px;
 }
+.form {
 
+}
+.signUpLink a{
+	font-size: 20px;
+	text-decoration: none;
+	color: inherit;
+}
 .backgroundSplash {
-	position:absolute;
-	display:block;
-	background-image: url("img/background1.jpg");
-
-}
-
-.splashLogin{
-	padding: 20px;
-	opacity: 1;
-}
-
-.splash {
-	background-color: #8C8C8C;
-	width:500px;
-	height: 500px;
+	position: relative;
+	font-family: 'PT Sans Narrow', sans-serif;
+	color:white;
 	margin: 0 auto;
-	opacity: .4;
-	border-radius: 30px;
-	text-align: center;
-	margin-top: 60px;
+	
 }
+	.splash {
+			height: 100%;
+			width:60%;
+			margin: 0 auto;
+			display: block;
+		  	background: rgba(140,140,140,.5);
+		  	border: .2px solid #1AD8FF;
+		  	border: .2px solid #1AD8FF;
+		  	border-radius: 50px;
+		  	z-index: -100;
+		  	padding-top: 15px;
+		  	padding-bottom: 30px;
+	}
+
+	.splashLogin{
+			width:60%;
+			margin: 0 auto;
+			text-align: center;
+			position:relative; 	
+	}
+
+#SignUpContainer {
+	position: relative;
+	margin: 0 auto;
+	
+
+}
+	#SignUpContainer2 h1 {
+		text-align: center;
+	}
+	#SignUpContainer2 {
+			height: 100%;
+			width:60%;
+			margin: 0 auto;
+			display: block;
+		  	background: rgba(140,140,140,.5);
+		  	border: .2px solid #1AD8FF;
+		  	border: .2px solid #1AD8FF;
+		  	border-radius: 50px;
+		  	z-index: -100;
+		  	padding-top: 15px;
+		  	padding-bottom: 30px;
+	}
+
+	#SignUpContainer3 {
+			width:60%;
+			margin: 0 auto;
+			text-align: center;
+			position:relative; 	
+	}
+
+
 
 .logoutButton {
-	width: 0%;
+	width: 8%;
 	margin: 0 auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.loginButton {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: black;
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.signUpLink {
+	margin-bottom: 10px;
 }
 
 .welcomeContainer {
-	background-color: #8C8C8C;
-	width:400px;
-	height: 750px;
+	position: relative;
+	font-family: 'PT Sans Narrow', sans-serif;
+	color:white;
 	margin: 0 auto;
-	opacity: 1;
-	border-radius: 30px;
-	text-align: center;
-	float:right;
+	margin-top: 100px;
 
 }
+	.welcomeContainer2 {
+		font-family: 'Damion', cursive;
+		height: 100%;
+		width:60%;
+		margin: 0 auto;
+		display: block;
+	  	background: rgba(140,140,140,.5);
+	  	border-radius: 3px;
+	  	z-index: -100;
+	  	text-align: center;
+	}
+
+	.categoriesSplash {
+		width:80%;
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 10px;
+		position:relative;
+		list-style-type: none;
+	}
 
 #background {
 	height:100%;
@@ -72,14 +149,16 @@ footer {
 
 .header1 {
 	position: relative;
-	width: 100%;
+	width: 30%;
 	margin: 0 auto;
+	text-align: center;
 }
 .container{
 	position: relative;
 	font-family: 'PT Sans Narrow', sans-serif;
 	color:white;
 	margin: 0 auto;
+	margin-bottom: 70px;
 	
 }
 	.container1 {
@@ -101,6 +180,29 @@ footer {
 		padding-top: 10px;
 		position:relative;
 	}
+
+	.EditText {
+		width:80%;
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 10px;
+		position:relative;
+		color: black;
+	}
+
+	.EditText h1 {
+		font-family: 'Damion', cursive;
+		position: relative;
+		width: 30%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.EditText button {
+		font-family: 'PT Sans Narrow', sans-serif;
+		margin: 10px;
+	}
+
 	.ArticleText img{
 		width:50%;
 		margin: 0 auto;
@@ -117,6 +219,17 @@ footer {
 
 .categoriesSplash {
 	color:#1AD8FF;
+	width: 30%;
+	margin: 0 auto;
+}
+
+.categoryList a{
+	color:#FF3387;
+	font-size: 25px;
+	text-decoration: none;
+	color: inherit;
+	font-family: 'PT Sans Narrow', sans-serif;
+	list-style-type: none;
 }
 
 .welcomeLinks {
@@ -127,23 +240,19 @@ footer {
 
 }
 
-.welcomeLinks:hover, .smallLink:hover, .categoryList:hover {
+.welcomeLinks:hover, .signUpLink:hover, .smallLink:hover, .categoryList:hover {
 	color:#FF3387;
 }
 
+.smallLink {
+	margin: 0 auto;
+	width:10%;
+}
 .smallLink a{
 	font-size: 30px;
 	text-decoration: none;
 	color: inherit;
-}
 
-.categoryList a{
-	color:#FF3387;
-	font-size: 25px;
-	text-decoration: none;
-	color: inherit;
-	font-family: 'PT Sans Narrow', sans-serif;
-	list-style: circle;
 }
 
 .welcomePhoto {
@@ -212,4 +321,32 @@ footer {
 		max-height: 500px;
 	}
 
+.wrongPassword {
+	background-image: url("img/wrongPass.jpg");
+	width: 1000px;
+	height:1000px;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	position: fixed;
+	margin-top: 75px;
+	margin-left: 300px;
+	opacity: .8;
+}
 
+.postText {
+	width:80%;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 10px;
+	position:relative;
+	color: black;
+}
+
+.form1 {
+	padding:15px;
+}
+
+.textArea {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}

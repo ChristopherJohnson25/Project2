@@ -1,22 +1,29 @@
 <h1>Post an Article!</h1>
 
-<form action="/post" method="POST">
-	<label for="img_url">Photo URL:</label>
-	<input type="text" name="img_url" placeholder="URL">
-	<label for="img_url">Subject:</label>
-	<input type="text" name="subject" placeholder="Subject">
-	<label for="select">Categories:</label>
+<div class="container">
+	<div class="container1">
+		<div class="postText">
+			<form class="form1" action="/post" method="POST">
+				<label for="img_url">Photo URL:</label>
+				<input type="text" name="img_url" placeholder="URL">
+				<label for="img_url">Subject:</label>
+				<input type="text" name="subject" placeholder="Subject">
+				<label for="select">Categories:</label>
 
 
-	<select type="text" name="category_id">
-		<% @categories.each do |category| %>
+				<select type="text" name="category_id">
+					<% @categories.each do |category| %>
 
-  		<option value="<%=category.id%>"> <%=category.name%> </option>
+			  		<option value="<%=category.id%>"> <%=category.name%> </option>
 
-  		<% end %>
+			  		<% end %>
 
-	</select>
-
-	<textarea name="post" cols="100" rows="20"></textarea>
-  <button>Submit</button>
-</form>
+				</select>
+				<div class="textArea">
+					<textarea name="post" cols="100" rows="20"></textarea>
+				</div>
+			  <button>Submit</button>
+			</form>
+		</div>
+	</div>
+</div>

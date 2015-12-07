@@ -1,24 +1,37 @@
-<h1>Edit!</h1>
+<div class="container">
+	<div class="container1">
+		<div class="EditText">
+		<form action="/articles/<%= @article.id %>" method="POST">
+			<input type="hidden" name="_method" value="patch">
+			<label for="img_url">Photo URL:</label>
+			<input value="<%=@article.img_url%>"type="text" name="img_url" placeholder="URL">
+			<label for="img_url">Subject:</label>
+			<input value= "<%=@article.subject%>" type="text" name="subject" placeholder="Subject">
+			<label for="select">Categories:</label>
 
-<form action="/articles/<%= @article.id %>" method="POST">
-	<input type="hidden" name="_method" value="patch">
-	<label for="img_url">Photo URL:</label>
-	<input value="<%=@article.img_url%>"type="text" name="img_url" placeholder="URL">
-	<label for="img_url">Subject:</label>
-	<input value= "<%=@article.subject%>" type="text" name="subject" placeholder="Subject">
-	<label for="select">Categories:</label>
 
+			<select type="text" name="category_id">
+				<% @categories.each do |category| %>
 
-	<select type="text" name="category_id">
-		<% @categories.each do |category| %>
+		  		<option value="<%=category.id%>"> <%=category.name%> </option>
 
-  		<option value="<%=category.id%>"> <%=category.name%> </option>
+		  		<% end %>
 
-  		<% end %>
+			</select>
 
-	</select>
+			<textarea name="post" cols="100" rows="20">"<%=@article.post%>"</textarea>
+		  <button>Edit</button>
+		</form>
 
-	<textarea name="post" cols="100" rows="20">"<%=@article.post%>"</textarea>
-  <button>Edit</button>
-</form>
+		<form method ="POST" action="/articles/<%= @article["id"] %>">
+			 <input type="hidden" name="_method" value="delete">
+			 <button>Delete Article</button>
+		</form>
+		</div>
+	</div>
+</div>
+
+<div class="smallLink">
+	<a href="/welcome">...Back</a>
+</div>
 

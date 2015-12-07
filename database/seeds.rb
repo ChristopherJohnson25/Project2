@@ -18,7 +18,7 @@ a1 = Article.create({
 	})
 
 a2 = Article.create({
-	post: "## Born to Run  
+	post: "Born to Run  
 	Occasionally, a record appears that changes fundamentally the way we hear rock & roll, the way it's recorded, the way it's played. Such records — Jimi Hendrix's Are You Experienced, Bob Dylan's \"Like a Rolling Stone,\" Van Morrison's Astral Weeks, Who's Next, The Band — force response, both from the musical community and the audience. To me, these are the records justifiably called classics, and I have no doubt that Bruce Springsteen's Darkness on the Edge of Town will someday fit as naturally within that list as the Rolling Stones'(I Can't Get No) Satisfaction or Sly and the Family Stone's \"Dance to the Music.\" One ought to be wary of making such claims, but in this case, they're justified at every level. In the area of production, Darkness on the Edge of Town is nothing less than a breakthrough. Springsteen — with coproducer Jon Landau, engineer Jimmy Iovine and Charles Plotkin, who helped Iovine mix the LP — is the first artist to fuse the spacious clarity of Los Angeles record making and the raw density of English productions. That's the major reason why the result is so different from Born to Run's Phil Spector wall of sound. On the earlier album, for instance, the individual instruments were deliberately obscured to create the sense of one huge instrument. Here, the same power is achieved more naturally. Most obviously, Max Weinberg's drumming has enormous size, a heartbeat with the same kind of space it occupies onstage (the only other place I've heard a bass drum sound this big).", 
 	subject: "Born to Run Review", 
 	img_url: "http://1.bp.blogspot.com/-ZRY-xN90BIQ/TgO8xFwaZAI/AAAAAAAAAVs/TlunT6C6Qbk/s1600/6_7_small.jpg",
@@ -26,7 +26,7 @@ a2 = Article.create({
 	})
 
 a3 = Article.create({
-	post: "###THE BIG MAN IN THE BAND
+	post: "THE BIG MAN IN THE BAND
 
 		So who is the “Minister of Soul” and the “Secretary of the Brotherhood?” In concert introductions Bruce would ask: “Do I have to say his name?” to which the audience would dutifully reply with only one word: “Clarence!”
 

@@ -1,21 +1,21 @@
-<div id="background" class="welcomePhoto"></div>
+<div>
 <div class="welcomeContainer">
-	<h1>Welcome!</h1>
-	<div>
-		<a class="welcomeLinks" href="/postArticle">Post an Article!</a>
-		<a class="welcomeLinks" href="/articles">View All Articles</a>
-	</div>
-	<div class="categoriesSplash">
-		<h1>Categories!</h1>
-		 <ul>
-		    <% @categories.each do |category| %>
-		      <li class="categoryList">
-		      	<p>
-		      		<a href="/categories/<%= category["id"] %>"><%=category["name"]%></a> 
-		      	</p>
-		      </li>
-		    <% end %>
-		  </ul>
+	<div class="welcomeContainer2">
+		<h1>Welcome!</h1>
+		<div>
+			<a class="welcomeLinks" href="/postArticle">Post an Article</a>
+			<a class="welcomeLinks" href="/articles">View All Articles</a>
+		</div>
+		<div class="categoriesSplash">
+			<h1>Categories</h1>
+			 <ul>
+			    <% @categories.each do |category| %>
+			      <li class="categoryList">
+			      		<a href="/categories/<%= category["id"] %>"><%=category["name"]%></a> 
+			      </li>
+			    <% end %>
+			  </ul>
+		</div>
 	</div>
 </div>
 
@@ -30,4 +30,5 @@
 
 
 	</div>
+</div>
 
