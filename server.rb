@@ -28,7 +28,7 @@ module App
         password_confirmation: params["password_confirmation"],
         join_date: DateTime.now
       })
-      redirect to "/welcome"
+      redirect to "/"
     end
 
     get "/welcome" do
