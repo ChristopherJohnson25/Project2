@@ -78,13 +78,14 @@ footer {
 #SignUpContainer {
 	position: relative;
 	margin: 0 auto;
+
 }
 #SignUpContainer2 h1 {
 	text-align: center;
 }
 #SignUpContainer2 {
 	height: 100%;
-	width:60%;
+	width: 20%;
 	margin: 0 auto;
 	display: block;
 	background: rgba(140,140,140,.5);
@@ -94,6 +95,7 @@ footer {
 	z-index: -100;
 	padding-top: 15px;
 	padding-bottom: 30px;
+
 }
 
 	#SignUpContainer3 {
