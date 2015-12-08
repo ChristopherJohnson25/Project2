@@ -11,8 +11,7 @@
 				<p><%= markdown(article.post) %></p>
 				<% article.categories.each do |category| %>	
 					<h2>Category: <%= category.name %></h2>
-					<h4><a href="/edit">Edit</a></h4>
-					<h5>by <a href="/profile/<%= article.user.id %>"><%= article.user.user_name %></a> on <%= article.post_date %> </h5>
+					<h4>by <a href="/profile/<%= article.user.id %>"><%= article.user.user_name %></a> on <%= article.post_date %> </h4>
 				<% end %>
 			<% end %>
 		</div>
