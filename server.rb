@@ -1,5 +1,5 @@
 module App 
-	class Server < Sinatra::Base
+    class Server < Sinatra::Base
 
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, space_after_headers: true, bold:true, quote: true, underline: true,hard_wrap: true)
 
