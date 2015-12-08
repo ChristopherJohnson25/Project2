@@ -10,13 +10,14 @@
 			</div>
 
 			<% @images.each do |img| %>
-			<div class="userPix">
+			<!-- <div class="userPix">
 				<img src="<%=img.img_url%>">
-			</div>
+			</div> -->
 			<div>
 				<h2>Articles By <%= @profile.user_name %> </h2>
 				<h3> <%= img.subject %> </h3>
 				<p> <%= img.post %> </p>
+				<p> <img id="bigPic" src="<%= img.img_url %>"> </p>
 			</div>
 			<% end %>
 
@@ -24,4 +25,8 @@
 
 	</div>
 	
+</div>
+
+<div class="smallLink">
+	<a href="/welcome">...Back</a>
 </div>

@@ -1,5 +1,5 @@
 <div class="header1">
-	<h1><%= @category.name %></h1>
+	<h1> <%= @category.name %> </h1>
 </div>
 
 	<div class="container">
@@ -10,7 +10,7 @@
 			<h3>Click To Edit</h3>
 			<p> <%= markdown(article.post) %> </p>
 			<div>
-				<img src="<%= article.img_url %>">
+				<img id="bigPic" src="<%= article.img_url %>">
 			</div>
 
 			<h4>by <a href="/profile/<%= article.user.id %>"><%= article.user.user_name %></a> on <%= article.post_date %> </h4>

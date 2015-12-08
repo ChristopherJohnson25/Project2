@@ -4,7 +4,7 @@ require_relative "migrations/create_category.rb"
 require_relative "migrations/create_articles_categories.rb"
 
 
-CreateUsers.migrate(:up)
-CreateArticles.migrate(:up)
-CreateCategories.migrate(:up)
-CreateArticlesCategories.migrate(:up)
+CreateUsers.migrate(argv[0])
+CreateArticles.migrate(argv[0])
+CreateCategories.migrate(argv[0])
+CreateArticlesCategories.migrate(argv[0])

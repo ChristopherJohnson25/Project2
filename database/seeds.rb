@@ -32,9 +32,17 @@ a3 = Article.create({
 	post_date: DateTime.now
 	})
 
+a4 = Article.create({
+	post: "Epic is one of those superlatives whose meaning has been watered down in our culture to the point of near-uselessness: like awesome,hilarious or superstar. But to blazes with hyperbole: Tuesday night’s concert by Bruce Springsteen and the E Street Band was epic, arguably their best local show since the mid-’80s glory days. Forget the notion of a band cruising on a tour’s second leg, this sold-out Honda Center gig was longer, more energetic, more fun, more … everything than Springsteen’s L.A. show in April. And that one was very good. No, this 28-song, 3½-hour intermissionless marathon brought old fans back to the times of a quarter-century and more ago when singer, band and crowd bonded in ways rarely experienced in rock history. Sheer symbiosis.Something for everybody -- another overused phrase that abuts cliche, except when it’s entirely merited. Consider: The oldest-school fans got songs from the first two albums, the die-hards got deep cuts, the pop fans got “Hungry Heart” and “Dancing in the Dark,” the kiddies got “Waitin’ on a Sunny Day,” the folkies got tunes recalling or inspired by Seeger and Guthrie, the scholarly got Steinbeck, the soulsters got “Raise Your Hand,” and the catnip encore of megahits -- including “Santa Claus Is Comin’ to Town” -- was for, well, everyone. Springsteen even regaled the crowd in a funny story, a tactic rarely deployed in recent years.", 
+	subject: "Bruce In L.A.", 
+	img_url: "http://assets.rollingstone.com/assets/images/story/50-greatest-live-acts-right-now-20130731/1000x600/20130729-bruce-springsteen-600-1375130708.jpg",
+	post_date: DateTime.now
+	})
+
 a1.categories.push(gear)
 a2.categories.push(album_reviews)
 a3.categories.push(band_members)
+a4.categories.push(show_reviews)
 
 user = User.create({
 	password: "whatever", 
@@ -63,3 +71,4 @@ user2 = User.create({
 user.articles.push(a1)
 user.articles.push(a2)
 user.articles.push(a3)
+user2.articles.push(a4)

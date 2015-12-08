@@ -9,17 +9,23 @@
 	<script src="main.js"></script>
 </head>
 <body>
-	<% if session[:user_id] %>	
-		<header>
+	
+	
+		
+	
+	<%=yield%>
+	<footer>
 			<div class="logoutButton">
 				<form action="/sessions" method="POST">
 					<input type="hidden" name="_method" value="delete">
-				   	<button class="pure-button">Log Out</button>
+					<% if session[:user_id] %>	
+				   		<button class="button1">Log Out</button>
+				   	<% end %>
 				</form>
 			</div>
-	<% end %>
-		</header>
-			<%=yield%>
+		
+			
+		</footer>
 	
 </body>
 </html>
